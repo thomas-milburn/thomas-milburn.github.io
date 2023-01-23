@@ -1,1 +1,78 @@
-<h1>Hello world</h1>
+<!DOCTYPE html>
+<html>
+<script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+<!-- we import arjs version without NFT but with marker + location based support -->
+<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+<body style="margin : 0; overflow: hidden;">
+<a-scene embedded arjs="detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
+    <a-assets>
+        <img id="code_1" src="assets/intro_1.png">
+        <a-asset-item id="code_10" src="assets/methods_model_10.obj"></a-asset-item>
+        <img id="code_11" src="assets/fig1_11.png">
+        <img id="code_13" src="assets/fig2_13.png">
+        <img id="code_15" src="assets/fig3_15.png">
+        <img id="code_14" src="assets/fig6_14.png">
+        <img id="code_16" src="assets/conclusion_16.png">
+    </a-assets>
+
+    <a-marker
+        type="barcode"
+        size="0.42"
+        value="1"
+    >
+        <a-image src="#code_1" rotation="270 0 0" width="5.63" height="10"></a-image>
+    </a-marker>
+
+    <a-marker
+        type="barcode"
+        size="0.42"
+        value="10"
+    >
+        <a-obj-model src="#code_10" scale="0.05 0.05 0.05" rotation="0 180 0"
+                     animation="property: rotation; to: 0 180 360; loop: true; dur: 10000; easing: linear"></a-obj-model>
+    </a-marker>
+
+    <a-marker
+        type="barcode"
+        size="0.42"
+        value="11"
+    >
+        <a-image src="#code_11" rotation="270 0 0" width="5.63" height="10"></a-image>
+    </a-marker>
+
+    <a-marker
+        type="barcode"
+        size="0.42"
+        value="13"
+    >
+        <a-image src="#code_13" rotation="270 0 0" width="5.63" height="10"></a-image>
+    </a-marker>
+
+    <a-marker
+        type="barcode"
+        size="0.42"
+        value="14"
+    >
+        <a-image src="#code_14" rotation="270 0 0" width="5.63" height="10"></a-image>
+    </a-marker>
+
+    <a-marker
+        type="barcode"
+        size="0.42"
+        value="15"
+    >
+        <a-image src="#code_15" rotation="270 0 0" width="5.63" height="10"></a-image>
+    </a-marker>
+
+    <a-marker
+        type="barcode"
+        size="0.42"
+        value="16"
+    >
+        <a-image src="#code_16" rotation="270 0 0" width="5.63" height="10"></a-image>
+    </a-marker>
+
+    <a-entity camera></a-entity>
+</a-scene>
+</body>
+</html>
